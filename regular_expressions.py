@@ -16,7 +16,7 @@ def extract_image_text(text_html):
     for lnk in list_link:
         one_link = re.search(extension, lnk)
         if one_link is not None:
-            cleaned_url = re.search(r'h(\w|\d|:|/|\.)+', lnk)
+            cleaned_url = re.search(r'http(\w|\d|:|/|\.)+', lnk)
             img_link.append(cleaned_url.group())
     return img_link
 
